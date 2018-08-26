@@ -1,0 +1,40 @@
+#include <stdlib.h>
+#include <time.h>
+#include <iostream>
+
+using namespace std;
+
+int main ()
+
+{
+setlocale(LC_ALL, "Turkish");
+
+int guess;
+char ans;
+
+srand (time(NULL));
+
+int rnd_number=rand ()%50;
+
+cout <<"Sayi Tahmin Oyununa Hosgeldin" <<endl;
+cout <<"Tahmin etmeye basla.";
+
+cin >> guess;
+
+while (guess != rnd_number)
+{
+        if (guess<rnd_number)
+        {
+            cout << guess << "\ncik " << endl;
+        }
+        
+        else
+        {
+            cout << guess << "\nin" << endl;
+        }
+
+        cout << "Dene bir daha : "<< endl;
+        cin >> guess;    
+}
+        cout << "Tebrikler. Yakaladin " << ans<<endl;
+}
